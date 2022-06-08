@@ -33,6 +33,7 @@ resource "tencentcloud_cdn_domain" "domain" {
       for_each = lookup(local.https_config, "server_certificate_config", [])
       content {
         certificate_id = lookup(local.https_config.server_certificate_config, "certificate_id", null)
+        message = lookup(local.https_config.server_certificate_config, "message", null)
       }
     }
   }
