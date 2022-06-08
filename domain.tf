@@ -17,7 +17,7 @@ resource "tencentcloud_cdn_domain" "domain" {
     https_switch         = lookup(local.https_config, "https_switch", "on")
     http2_switch         = lookup(local.https_config, "http2_switch", "on")
     ocsp_stapling_switch = lookup(local.https_config, "ocsp_stapling_switch", "on")
-    spdy_switch          = lookup(local.https_config, "spdy_switch", "on")
+    spdy_switch          = lookup(local.https_config, "spdy_switch", "off")
     verify_client        = lookup(local.https_config, "verify_client", "off")
 
     dynamic "force_redirect" {
