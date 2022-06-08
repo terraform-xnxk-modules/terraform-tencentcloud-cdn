@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.2.0](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/compare/v1.1.0...v1.2.0) (2022-06-08)
+
+
+### Features
+
+* add message in https_config.server_certificate_config ([d952d02](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/commit/d952d02c6af463978ed9080d5ccb4e0147d8c83a))
+
 # [1.1.0](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/compare/v1.0.2...v1.1.0) (2022-06-08)
 
 
