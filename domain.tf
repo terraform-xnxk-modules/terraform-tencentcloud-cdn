@@ -29,13 +29,11 @@ resource "tencentcloud_cdn_domain" "domain" {
       }
     }
 
-    dynamic "server_certificate_config" {
-      for_each = lookup(local.https_config, "server_certificate_config", [])
-      content {
-        certificate_id = lookup(local.https_config.server_certificate_config, "certificate_id", null)
-        message = lookup(local.https_config.server_certificate_config, "message", null)
-      }
+    server_certificate_config {
+      certificate_id = lookup(local.https_config.server_certificate_config, "certificate_id", null)
+      message        = lookup(local.https_config.server_certificate_config, "message", null)
     }
+
   }
 
   origin {
