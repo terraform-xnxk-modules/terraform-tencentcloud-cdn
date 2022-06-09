@@ -61,7 +61,7 @@ resource "tencentcloud_cdn_domain" "domain" {
   dynamic "rule_cache" {
     for_each = length(local.rule_cache) == 0 ? [] : local.rule_cache
     content {
-      cache_time = lookup(rule_cache.value, "cache_time", 300)
+      cache_time           = lookup(rule_cache.value, "cache_time", 300)
       compare_max_age      = lookup(rule_cache.value, "compare_max_age", "off")
       follow_origin_switch = lookup(rule_cache.value, "follow_origin_switch", "off")
       ignore_cache_control = lookup(rule_cache.value, "ignore_cache_control", "off")
