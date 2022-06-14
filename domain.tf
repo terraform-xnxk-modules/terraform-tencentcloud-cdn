@@ -43,6 +43,8 @@ resource "tencentcloud_cdn_domain" "domain" {
     origin_pull_protocol = lookup(local.origin, "origin_pull_protocol", "follow")
     cos_private_access   = lookup(local.origin, "cos_private_access", "off")
 
+    server_name = lookup(local.origin, "server_name", var.domain)
+
     #      dynamic "backup_origin_list" {
     #        for_each = local.backup_origin_list
     #        content {
