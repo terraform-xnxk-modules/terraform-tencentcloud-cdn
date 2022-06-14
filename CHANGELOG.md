@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.3.0](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/compare/v1.2.1...v1.3.0) (2022-06-14)
+
+
+### Features
+
+* add origin server_name support ([8f204eb](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/commit/8f204ebaad775474edea7658b7786bdae5a8cf61))
+
 ## [1.2.1](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/compare/v1.2.0...v1.2.1) (2022-06-09)
 
 # [1.2.0](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/compare/v1.1.0...v1.2.0) (2022-06-08)
