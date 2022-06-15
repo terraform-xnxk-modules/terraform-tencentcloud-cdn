@@ -20,13 +20,10 @@ resource "tencentcloud_cdn_domain" "domain" {
     spdy_switch          = lookup(local.https_config, "spdy_switch", "off")
     verify_client        = lookup(local.https_config, "verify_client", "off")
 
-    dynamic "force_redirect" {
-      for_each = lookup(local.https_config, "force_redirect", [])
-      content {
-        switch               = lookup(local.https_config, "switch", "off")
-        redirect_type        = lookup(local.https_config, "redirect_type", "http")
-        redirect_status_code = lookup(local.https_config, "redirect_status_code", "302")
-      }
+    force_redirect {
+      switch               = lookup(local.https_config, "switch", "off")
+      redirect_type        = lookup(local.https_config, "redirect_type", "https")
+      redirect_status_code = lookup(local.https_config, "redirect_status_code", "302")
     }
 
     server_certificate_config {
