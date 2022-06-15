@@ -1,0 +1,29 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - '.github/workflows/tests.yml'
+      - '**.tf'
+      - '**.lock.hcl'
+  pull_request:
+    paths:
+      - '.github/workflows/tests.yml'
+      - '**.tf'
+      - '**.lock.hcl'
+  schedule:
+    - cron: "0 4 * * *" # UTC time
+  workflow_dispatch:
+
+jobs:
+  terraform:
+    name: Terraform
+    uses: XNXKTech/workflows/.github/workflows/terraform.yml@main
+    with:
+      directory: "['examples']"
+    secrets:
+      GH_TOKEN: ${{ secrets.CI_PAT }}
+      TENCENTCLOUD_SECRET_ID: ${{ secrets.TENCENTCLOUD_SECRET_ID }}
+      TENCENTCLOUD_SECRET_KEY: ${{ secrets.TENCENTCLOUD_SECRET_KEY }}
