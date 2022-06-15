@@ -4,6 +4,7 @@ locals {
   backup_origin_type = try(jsondecode(var.backup_origin_type), var.backup_origin_type)
   https_config       = try(jsondecode(var.https_config), var.https_config)
   rule_cache         = try(jsondecode(var.rule_cache), var.rule_cache)
+  request_header     = try(jsondecode(var.request_header), var.request_header)
 }
 
 resource "tencentcloud_cdn_domain" "domain" {
@@ -70,6 +71,20 @@ resource "tencentcloud_cdn_domain" "domain" {
       rule_paths           = lookup(rule_cache.value, "rule_paths", ["*"])
       rule_type            = lookup(rule_cache.value, "rule_type", "all")
       switch               = lookup(rule_cache.value, "switch", "on")
+    }
+  }
+
+  request_header {
+    switch = lookup(local.request_header, "switch", "off")
+    dynamic "header_rules" {
+      for_each = length(lookup(local.request_header, "header_rules", [])) == 0 ? [] : local.request_header.header_rules
+      content {
+        header_mode  = lookup(local.request_header.header_rules, "header_mode", "add")
+        header_name  = local.request_header.header_rules.header_name
+        header_value = local.request_header.header_rules.header_value
+        rule_paths   = lookup(local.request_header.header_rules, "rule_paths", ["*"])
+        rule_type    = lookup(local.request_header.header_rules, "rule_type", "all")
+      }
     }
   }
 
