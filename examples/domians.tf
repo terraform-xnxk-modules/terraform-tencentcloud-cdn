@@ -20,7 +20,7 @@ locals {
 }
 
 module "domain" {
-  source  = "../"
+  source = "../"
 
   for_each = {
     for domain in local.domains : domain.domain => {
