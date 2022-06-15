@@ -15,3 +15,11 @@ updates :
     open-pull-requests-limit : 10
     labels :
       - "type/dependencies"
+
+  - package-ecosystem : terraform
+    directory : "examples"
+    schedule :
+      interval : weekly
+    open-pull-requests-limit : 10
+    labels :
+      - "type/dependencies"
