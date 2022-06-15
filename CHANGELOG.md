@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.5.0](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/compare/v1.4.0...v1.5.0) (2022-06-15)
+
+
+### Features
+
+* add ipv6_access_switch support ([27f8a14](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/commit/27f8a140f838630560104de07a427bcc9dd0c0f0))
+* add project_id support ([1f88c7b](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/commit/1f88c7bd460b55400e3a46b60986a50b689d5fff))
+
 # [1.4.0](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/compare/v1.3.2...v1.4.0) (2022-06-15)
 
 
