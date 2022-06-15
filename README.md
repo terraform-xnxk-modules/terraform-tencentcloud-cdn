@@ -1,5 +1,7 @@
 # TencentCloud CDN Terraform module
 
+[![Tests](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/actions/workflows/tests.yml/badge.svg)](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/actions/workflows/tests.yml)
+
 Terraform module which creates CDN domains on TencentCloud.
 
 ## Features
