@@ -13,6 +13,7 @@ resource "tencentcloud_cdn_domain" "domain" {
   area                = var.area
   full_url_cache      = var.full_url_cache
   range_origin_switch = var.range_origin_switch
+  ipv6_access_switch  = var.ipv6_access_switch
 
   https_config {
     https_switch         = lookup(local.https_config, "https_switch", "on")

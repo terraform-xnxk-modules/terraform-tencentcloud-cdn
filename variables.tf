@@ -26,6 +26,12 @@ variable "range_origin_switch" {
   type        = string
 }
 
+variable "ipv6_access_switch" {
+  default     = "off"
+  description = "Whether to enable IPv6 access switch"
+  type        = string
+}
+
 variable "origin" {
   default     = {}
   description = "The origin to use"
