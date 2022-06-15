@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.4.0](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/compare/v1.3.2...v1.4.0) (2022-06-15)
+
+
+### Features
+
+* add request_header support ([42f7dc5](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/commit/42f7dc56a7313645055f8294b6d691d1032a0695))
+
 ## [1.3.2](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/compare/v1.3.1...v1.3.2) (2022-06-15)
 
 ## [1.3.1](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/compare/v1.3.0...v1.3.1) (2022-06-15)
