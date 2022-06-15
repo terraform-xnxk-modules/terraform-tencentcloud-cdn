@@ -32,6 +32,12 @@ variable "ipv6_access_switch" {
   type        = string
 }
 
+variable "project_id" {
+  default     = 0
+  description = "The project ID to create the service in"
+  type        = number
+}
+
 variable "origin" {
   default     = {}
   description = "The origin to use"

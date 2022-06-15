@@ -14,6 +14,7 @@ resource "tencentcloud_cdn_domain" "domain" {
   full_url_cache      = var.full_url_cache
   range_origin_switch = var.range_origin_switch
   ipv6_access_switch  = var.ipv6_access_switch
+  project_id          = var.project_id
 
   https_config {
     https_switch         = lookup(local.https_config, "https_switch", "on")
