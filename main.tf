@@ -22,6 +22,7 @@ resource "tencentcloud_cdn_domain" "domain" {
     ocsp_stapling_switch = lookup(local.https_config, "ocsp_stapling_switch", "on")
     spdy_switch          = lookup(local.https_config, "spdy_switch", "off")
     verify_client        = lookup(local.https_config, "verify_client", "off")
+    tls_versions         = lookup(local.https_config, "tls_versions", ["TLSv1", "TLSv1.1", "TLSv1.2"])
 
     force_redirect {
       switch               = lookup(local.https_config, "switch", "off")
