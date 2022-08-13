@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.6.0](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/compare/v1.5.0...v1.6.0) (2022-08-13)
+
+
+### Features
+
+* add tls_versions support ([1f7a5f1](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/commit/1f7a5f1891231e7134a0b19eb5181430afe6b88a))
+
 # [1.5.0](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/compare/v1.4.0...v1.5.0) (2022-06-15)
 
 
