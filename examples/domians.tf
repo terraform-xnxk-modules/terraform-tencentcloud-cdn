@@ -14,8 +14,8 @@ locals {
           message        = data.tencentcloud_ssl_certificates.starubiquitous-com.certificates.0.name
         }
       })
-      rule_cache = local.rule_cache.default
-      header_rules = local.header_rules.default
+      rule_cache   = local.rule_cache.default
+      response_header = concat(local.response_header.default, local.response_header.cors_rules)
     }
   ]
 }
@@ -37,19 +37,23 @@ module "domain" {
         cos_private_access   = lookup(domain.origin, "cos_private_access", "off")
         server_name          = try(domain.origin.origin_list.0, domain.domain)
       }
-      rule_cache            = try(domain.rule_cache, [])
-      request_header_switch = can(domain.header_rules) ? "on" : "off"
-      header_rules          = try(domain.header_rules, [])
+    rule_cache             = try(domain.rule_cache, [])
+    request_header_switch  = can(domain.request_header) ? "on" : "off"
+    request_header_rules   = try(domain.request_header, [])
+    response_header_switch = can(domain.response_header) ? "on" : "off"
+    response_header_rules  = try(domain.response_header, [])
     }
   }
-  domain                = each.key
-  service_type          = each.value.service_type
-  area                  = each.value.area
-  range_origin_switch   = each.value.range_origin_switch
-  full_url_cache        = each.value.full_url_cache
-  https_config          = each.value.https_config
-  origin                = each.value.origin
-  rule_cache            = each.value.rule_cache
-  request_header_switch = each.value.request_header_switch
-  header_rules          = each.value.header_rules
+  domain                 = each.key
+  service_type           = each.value.service_type
+  area                   = each.value.area
+  range_origin_switch    = each.value.range_origin_switch
+  full_url_cache         = each.value.full_url_cache
+  https_config           = each.value.https_config
+  origin                 = each.value.origin
+  rule_cache             = each.value.rule_cache
+  request_header_switch  = each.value.request_header_switch
+  request_header_rules   = each.value.request_header_rules
+  response_header_switch = each.value.response_header_switch
+  response_header_rules  = each.value.response_header_rules
 }

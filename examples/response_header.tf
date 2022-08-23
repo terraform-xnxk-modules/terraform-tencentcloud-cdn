@@ -1,5 +1,5 @@
 locals {
-  header_rules = {
+  response_header = {
     default = [
       {
         header_mode = "del"
@@ -8,7 +8,7 @@ locals {
         rule_paths  = ["*"]
       }
     ],
-    cors_rules = [
+    cors = [
       {
         header_mode  = "set"
         header_name  = "Access-Control-Allow-Origin"
