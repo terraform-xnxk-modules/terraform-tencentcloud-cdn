@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.1](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/compare/v1.6.0...v1.6.1) (2022-08-23)
+
+
+### Code Refactoring
+
+* request_header ([483543f](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/commit/483543f1b792cf4ae511518ec2b6de6d7c139a4d))
+
+
+### BREAKING CHANGES
+
+* CHANGE
+
+This commit removed the `request_header` var uses `request_header_switch`
+
+and header_rules to set switches and rules respectively.
+
+see examples for details of use
+
+Signed-off-by: Teakowa <27560638+Teakowa@users.noreply.github.com>
+
 # [1.6.0](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/compare/v1.5.0...v1.6.0) (2022-08-13)
 
 
