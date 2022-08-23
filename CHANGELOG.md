@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.2](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/compare/v1.6.1...v1.6.2) (2022-08-23)
+
+
+### Bug Fixes
+
+* **request_header:** make support concat ([69b8e16](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/commit/69b8e1618fdd00bbbf71899f67a56bc485d18dd3))
+
 ## [1.6.1](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/compare/v1.6.0...v1.6.1) (2022-08-23)
 
 
