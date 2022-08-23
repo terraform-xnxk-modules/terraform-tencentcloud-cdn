@@ -81,7 +81,7 @@ resource "tencentcloud_cdn_domain" "domain" {
   request_header {
     switch = local.request_header_switch
     dynamic "header_rules" {
-      for_each = length(local.header_rules) == 0 ? [] : local.header_rules
+      for_each = local.header_rules
       content {
         header_mode  = lookup(header_rules.value, "header_mode", "add")
         header_name  = header_rules.value.header_name
