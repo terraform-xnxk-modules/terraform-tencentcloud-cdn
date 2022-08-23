@@ -15,6 +15,7 @@ locals {
         }
       })
       rule_cache = local.rule_cache.default
+      header_rules = local.header_rules.default
     }
   ]
 }
@@ -36,7 +37,9 @@ module "domain" {
         cos_private_access   = lookup(domain.origin, "cos_private_access", "off")
         server_name          = try(domain.origin.origin_list.0, domain.domain)
       }
-      rule_cache = try(domain.rule_cache, [])
+      rule_cache            = try(domain.rule_cache, [])
+      request_header_switch = can(domain.header_rules) ? "on" : "off"
+      header_rules          = try(domain.header_rules, [])
     }
   }
   domain              = each.key
@@ -47,4 +50,6 @@ module "domain" {
   https_config        = each.value.https_config
   origin              = each.value.origin
   rule_cache          = each.value.rule_cache
+  request_header_switch = each.value.request_header_switch
+  header_rules          = each.value.header_rules
 }
