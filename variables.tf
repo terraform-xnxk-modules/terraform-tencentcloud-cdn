@@ -89,8 +89,14 @@ variable "rule_cache" {
   description = "Whether to enable the rule cache"
 }
 
-variable "request_header" {
-  default     = {}
+variable "request_header_switch" {
+  default     = "off"
+  description = "Whether to enable the request header switch"
+  type        = string
+}
+
+variable "header_rules" {
+  default     = []
   description = "The request header configuration to use for the service"
 }
 
