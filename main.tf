@@ -1,9 +1,9 @@
 locals {
-  origin             = try(jsondecode(var.origin), var.origin)
-  backup_origin_list = try(jsondecode(var.backup_origin_list), var.backup_origin_list)
-  backup_origin_type = try(jsondecode(var.backup_origin_type), var.backup_origin_type)
-  https_config       = try(jsondecode(var.https_config), var.https_config)
-  rule_cache         = try(jsondecode(var.rule_cache), var.rule_cache)
+  origin                = try(jsondecode(var.origin), var.origin)
+  backup_origin_list    = try(jsondecode(var.backup_origin_list), var.backup_origin_list)
+  backup_origin_type    = try(jsondecode(var.backup_origin_type), var.backup_origin_type)
+  https_config          = try(jsondecode(var.https_config), var.https_config)
+  rule_cache            = try(jsondecode(var.rule_cache), var.rule_cache)
   request_header_switch = var.request_header_switch
   header_rules          = try(jsondecode(var.header_rules), var.header_rules)
 }

@@ -42,14 +42,14 @@ module "domain" {
       header_rules          = try(domain.header_rules, [])
     }
   }
-  domain              = each.key
-  service_type        = each.value.service_type
-  area                = each.value.area
-  range_origin_switch = each.value.range_origin_switch
-  full_url_cache      = each.value.full_url_cache
-  https_config        = each.value.https_config
-  origin              = each.value.origin
-  rule_cache          = each.value.rule_cache
+  domain                = each.key
+  service_type          = each.value.service_type
+  area                  = each.value.area
+  range_origin_switch   = each.value.range_origin_switch
+  full_url_cache        = each.value.full_url_cache
+  https_config          = each.value.https_config
+  origin                = each.value.origin
+  rule_cache            = each.value.rule_cache
   request_header_switch = each.value.request_header_switch
   header_rules          = each.value.header_rules
 }
