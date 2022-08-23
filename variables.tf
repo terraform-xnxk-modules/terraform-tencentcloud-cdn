@@ -95,8 +95,18 @@ variable "request_header_switch" {
   type        = string
 }
 
-variable "header_rules" {
-  default     = []
+variable "request_header_rules" {
+  default     = {}
+  description = "Whether to enable the request header switch"
+}
+
+variable "response_header_switch" {
+  default     = "off"
+  description = "Whether to enable the response header switch"
+  type        = string
+}
+variable "response_header_rules" {
+  default     = {}
   description = "The request header configuration to use for the service"
 }
 
