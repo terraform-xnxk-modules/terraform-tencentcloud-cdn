@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.3](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/compare/v1.6.2...v1.6.3) (2022-08-23)
+
 ## [1.6.2](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/compare/v1.6.1...v1.6.2) (2022-08-23)
 
 
