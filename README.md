@@ -11,6 +11,7 @@ This module aims to implement ALL combinations of arguments supported by Tencent
 - Create domain
 - Origin
   - 🚧 backup origin
+- 🚧 Referer
 - HTTPS
   - https switch
   - http2 switch
@@ -18,7 +19,7 @@ This module aims to implement ALL combinations of arguments supported by Tencent
   - spdy switch
   - force redirect
 - Cache Rule
-- 🚧 Header RUle
+- Header Rule
 
 If there is a missing feature or a bug - [open an issue](https://github.com/terraform-xnxk-modules/terraform-tencentcloud-cdn/issues/new).
 
